@@ -10,4 +10,10 @@ public class NpcDialog : MonoBehaviour
     {
         FindObjectOfType<DialogManager>().StartDialog(dialog);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("foi");
+        triggerDialog();
+    }
 }

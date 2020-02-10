@@ -8,6 +8,8 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentencas;
     public Text nameText;
     public Text sentenceText;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class DialogManager : MonoBehaviour
     {
         Debug.Log("dialog with " + dialog.nome);
 
+        animator.SetBool("isOpen", true);
         nameText.text = dialog.nome;
         sentencas.Clear();
 
@@ -41,6 +44,7 @@ public class DialogManager : MonoBehaviour
     }
     public void FinishDialog()
     {
+        animator.SetBool("isOpen", false);
         Debug.Log("fim de dialogo");
     }
 

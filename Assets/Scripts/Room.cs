@@ -18,9 +18,9 @@ public class Room : MonoBehaviour
         
     }
 
-    void OnTriggerStay2D (Collider2D colision)
+    void OnTriggerEnter2D (Collider2D colision)
     {
-        Debug.Log("foi");
+       // Debug.Log("foi");
         //se o que colidiu é o jogador
         if (colision.CompareTag("Player"))
         {
