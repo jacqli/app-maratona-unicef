@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96328b8caa27e1e40bb26dfb105ddd2b, type: 3}
+  m_Name: TesteDialog
+  m_EditorClassIdentifier: 
+  sentencas:
+  - "@usuario, eis aqui uma cole\xE7\xE3o de pedras amontoadas dentro de um saco velho,
+    com dois buracos pequenos.  "
+  - "Por eles voc\xEA pode ver todas as pedras, em partes."
+  - "Pelo primeiro buraco, voc\xEA conseguiu observar  uma esmeralda grande, um diamante
+    pequenino e um rubi pequeno."
+  - "Podemos ent\xE3o considerar que por essa fenda se observa o conjunto A, composto
+    por uma das seguintes senten\xE7as. Escolha a correta:"
+  nome: Instrutor
+  nextQuestion: {fileID: 11400000, guid: b1d4853daab93194ca0e77adbec0ce3f, type: 2}
+  stopPlayer: 1

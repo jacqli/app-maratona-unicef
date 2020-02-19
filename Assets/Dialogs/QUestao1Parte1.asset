@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca9827e45f581145a0d0a6eea7b3e51, type: 3}
+  m_Name: QUestao1Parte1
+  m_EditorClassIdentifier: 
+  text: questao 1
+  escolhas:
+  - text: '{ E,d,r } '
+    dialog: {fileID: 11400000, guid: 04750fb94ba28204a8cc7f20ff4a5fa1, type: 2}
+  - text: '{ E,e,d }'
+    dialog: {fileID: 11400000, guid: f687fc7a75de4d844a4321797b3bfb9a, type: 2}
+  - text: '{ E,R,r }'
+    dialog: {fileID: 11400000, guid: f687fc7a75de4d844a4321797b3bfb9a, type: 2}
+  - text: '{ E,e,D,d }'
+    dialog: {fileID: 11400000, guid: f687fc7a75de4d844a4321797b3bfb9a, type: 2}
+  stopPlayer: 1

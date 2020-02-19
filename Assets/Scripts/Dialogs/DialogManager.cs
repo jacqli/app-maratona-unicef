@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
     private Queue<string> sentencas;
     public Text nameText;
     public Text sentenceText;
+    public Questao nextQuestion;
 
     public Animator animator;
     // Start is called before the first frame update
@@ -31,6 +32,23 @@ public class DialogManager : MonoBehaviour
         GoNextSentence();
     }
 
+    public void StartScriptedDialog(ScriptableDialog dialog)
+    {
+        Debug.Log("dialog with " + dialog.nome);
+
+        FindObjectOfType<PlayerMov>().canMove = false;
+        animator.SetBool("isOpen", true);
+        nameText.text = dialog.nome;
+        sentencas.Clear();
+        nextQuestion = dialog.nextQuestion;
+
+        foreach (string sentenca in dialog.sentencas)
+        {
+            sentencas.Enqueue(sentenca);
+        }
+        GoNextSentence();
+    }
+
     public void GoNextSentence()
     {
         if (sentencas.Count == 0)
@@ -44,8 +62,13 @@ public class DialogManager : MonoBehaviour
     }
     public void FinishDialog()
     {
+
+        FindObjectOfType<PlayerMov>().canMove = true;
         animator.SetBool("isOpen", false);
+        Debug.Log(nextQuestion);
         Debug.Log("fim de dialogo");
+        if(nextQuestion != null)
+            FindObjectOfType<QuestionManager>().StartQuestion(nextQuestion);
     }
 
 }

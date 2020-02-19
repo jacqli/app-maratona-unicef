@@ -6,6 +6,7 @@ public class Room : MonoBehaviour
 {
     public float posX;
     public float posY;
+    public Vector2 teleportPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +26,12 @@ public class Room : MonoBehaviour
         if (colision.CompareTag("Player"))
         {
             Debug.Log("colidiu " +posY);
-            CameraController.instance.setCameraPosition(new Vector2(posX, posY));
-            //CameraController.instance.setCameraPosition(new Vector2(transform.position.x, transform.position.y));
+            Debug.Log(teleportPlayer);
+            if (teleportPlayer != new Vector2(0,0))
+            {
+                FindObjectOfType<PlayerMov>().movePlayer(teleportPlayer);
+            }
+                CameraController.instance.setCameraPosition(new Vector2(posX, posY));
         }
         else
         {
